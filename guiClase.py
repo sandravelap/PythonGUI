@@ -10,6 +10,9 @@ window.geometry("400x300")
 def funcionSaludar():
     lblSaludo.config(text="Hola hola " + entNombre.get())
 
+def funcionDespedirse():
+    lblSaludo.config(text="Bye bye " + entNombre.get())
+
 #añadimos un widget tipo Label
 lblTitulo = tk.Label(window, text="Mi primer programa chispas")
 #posionamos el widget en la ventana window con el método pack()
@@ -22,6 +25,8 @@ entNombre.pack()
 #añadimos un widget tipo botón
 btnSaludar = tk.Button(window, text="Saludar", command=funcionSaludar)
 btnSaludar.pack()
+btnDespedirse = tk.Button(window, text="Despedirse", command=funcionDespedirse)
+btnDespedirse.pack()
 #creamos otro label para escribir en él el saludo al hacer click
 lblSaludo = tk.Label(window, text="Aquí irá el saludo")
 lblSaludo.pack()
